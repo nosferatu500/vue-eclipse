@@ -10,6 +10,10 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
+import 'vue-awesome/icons'{{#if_eq lintConfig "airbnb"}};{{/if_eq}
+import Icon from 'vue-awesome/components/Icon.vue'{{#if_eq lintConfig "airbnb"}};{{/if_eq}
+Vue.component('icon', Icon){{#if_eq lintConfig "airbnb"}};{{/if_eq}
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

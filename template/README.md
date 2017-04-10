@@ -2,6 +2,14 @@
 
 > {{ description }}
 
+***Based*** on [Vue-cli Webpack](http://vuejs-templates.github.io/webpack/).
+
+## Added
+
+- `Vue-Awesome` Alt Font-Awesome
+- `Sass Support` Awesome!!! Right?!
+- `Bootstrap-grid` Pretty cool...
+
 ## Build Setup
 
 ``` bash
