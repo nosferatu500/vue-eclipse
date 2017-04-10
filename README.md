@@ -6,8 +6,7 @@
 
 ## Documentation
 
-- [For this template](http://vuejs-templates.github.io/webpack): common questions specific to this template are answered and each part is described in greater detail
-- [For Vue 2.0](http://vuejs.org/guide/): general information about how to work with Vue, not specific to this template
+***Based*** on [Vue-cli Webpack](http://vuejs-templates.github.io/webpack/).
 
 ## Usage
 
@@ -15,7 +14,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli). **It
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init webpack my-project
+$ vue init nosferatu500/vue-eclipse my-project
 $ cd my-project
 $ npm install
 $ npm run dev
@@ -31,6 +30,9 @@ If port 8080 is already in use on your machine you must change the port number i
   - State preserving compilation error overlay
   - Lint-on-save with ESLint
   - Source maps
+  - `Vue-Awesome` Alt Font-Awesome
+  - `Sass Support` Awesome!!! Right?!
+  - `Bootstrap-grid` Pretty cool...
 
 - `npm run build`: Production ready build.
   - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
