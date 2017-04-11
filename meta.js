@@ -18,7 +18,7 @@ module.exports = {
       "type": "string",
       "required": false,
       "message": "Project description",
-      "default": "A Vue.js project"
+      "default": "A Vue-Eclipse App"
     },
     "author": {
       "type": "string",
@@ -26,7 +26,7 @@ module.exports = {
     },
     "build": {
       "type": "list",
-      "message": "Vue build",
+      "message": "Vue-Eclipse build",
       "choices": [
         {
           "name": "Runtime + Compiler: recommended for most users",
