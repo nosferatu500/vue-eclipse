@@ -23,7 +23,7 @@
         <div class="col-md-5">
           <h2>Ecosystem</h2>
           <ul>
-            <li v-for="m in modules"><a :href="m.link" target="_blank">{{ m.name }}</a></li>
+            <li v-for="m in modules"><a :href="m.link" target="_blank">\{{ m.name }}</a></li>
           </ul>
         </div>
         <div class="col-md-1"></div>
@@ -32,9 +32,9 @@
 </template>
 
 <script>
-export default {
   import { mapGetters } from 'vuex'
 
+export default {
   name: 'hello',
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
