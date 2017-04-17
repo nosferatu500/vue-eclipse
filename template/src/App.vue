@@ -32,5 +32,10 @@ export default {
   text-align: center
   color: #2c3e50
   margin-top: 60px
-
+  
+@media screen and (max-width: 400px)
+  #app
+    margin-top: 30px
+    img
+      width: 50%
 </style>

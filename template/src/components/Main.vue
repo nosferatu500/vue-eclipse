@@ -55,11 +55,9 @@ ul
   list-style-type: none
   padding: 0
 
-
 li 
   display: inline-block
   margin: 0 10px
-
 
 a
   color: #42b983
@@ -67,5 +65,14 @@ a
 hr
   border-top: 3px solid #42b983
 
+@media screen and (max-width: 400px)
+  h1:first-child
+    font-size: 24px
+  h1:nth-child(2)
+    font-size: 20px
+  hr
+    margin: 0
+  h2:nth-child(1)
+    margin-top: 40px
 
 </style>
