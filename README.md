@@ -69,6 +69,7 @@ cordova platform add <platform>
 And replace sdk tools from [download page](https://developer.android.com/studio/index.html#downloads)* 
 
 *-(under title: Get just the command line tools)
+```
 
 ### Fork It And Make Your Own
 
