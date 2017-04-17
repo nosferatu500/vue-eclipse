@@ -23,10 +23,7 @@
         <div class="col-md-5">
           <h2>Ecosystem</h2>
           <ul>
-            <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-            <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-            <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-            <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
+            <li v-for="m in modules"><a :href="m.link" target="_blank">{{ m.name }}</a></li>
           </ul>
         </div>
         <div class="col-md-1"></div>
@@ -36,13 +33,21 @@
 
 <script>
 export default {
+  import { mapGetters } from 'vuex'
+
   name: 'hello',
   data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
     return {
       msg: 'Welcome to Your Vue-Eclipse App.',{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
       msg2: 'Based on Vue.js. Created for You.'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
     }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}},
+  computed: mapGetters({
+    modules: 'allModules'
+  }),
+  created () {
+    this.$store.dispatch('getAllModules')
+  }
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
