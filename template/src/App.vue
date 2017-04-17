@@ -1,12 +1,11 @@
-<template>
-  <div id="app">
-    <img src="./assets/logo.png">
+<template lang="pug">
+  #app
+    img(src="./assets/logo.png")
     {{#router}}
-    <router-view></router-view>
+    router-view
     {{else}}
-    <hello></hello>
+    hello
     {{/router}}
-  </div>
 </template>
 
 <script>

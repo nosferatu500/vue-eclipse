@@ -1,34 +1,25 @@
-<template>
-  <div class="hello">
-    <div class="container">
-      <h1>\{{ msg }}</h1>
-      <h1>\{{ msg2 }}</h1>
-      <br>
-      <hr>
-      <br>
-    </div>
-    <div class="row">
-        <div class="col-md-1"></div>      
-        <div class="col-md-5">
-          <h2>Essential Links</h2>
-          <ul>
-            <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-            <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-            <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-            <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-            <br>
-            <li><a href="https://github.com/nosferatu500/eclipse-vue/" target="_blank">Docs for This Template</a></li>
-          </ul>
-        </div>
-        <div class="col-md-5">
-          <h2>Ecosystem</h2>
-          <ul>
-            <li v-for="m in modules"><a :href="m.link" target="_blank">\{{ m.name }}</a></li>
-          </ul>
-        </div>
-        <div class="col-md-1"></div>
-      </div>
-  </div>
+<template lang="pug">
+  .hello
+    .container
+      h1 \{{ msg }}
+      h1 \{{ msg2 }}
+      br
+      hr
+      br
+    .row
+        .col-md-5.col-md-offset-1
+          h2 Essential Links
+          ul
+            li: a(href="https://vuejs.org" target="_blank") Core Docs
+            li: a(href="https://forum.vuejs.org" target="_blank") Forum
+            li: a(href="https://gitter.im/vuejs/vue" target="_blank") Gitter Chat
+            li: a(href="https://twitter.com/vuejs" target="_blank") Twitter
+            br
+            li: a(href="https://github.com/nosferatu500/eclipse-vue/" target="_blank") Docs for This Template
+        .col-md-5
+          h2 Ecosystem
+          ul
+            li(v-for="m in modules"): a(:href="m.link" target="_blank") {{ m.name }}
 </template>
 
 <script>
