@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
+    "android": "npm run build && cordova prepare android && cordova run android",
+    "browser": "npm run build && cordova run browser",
     "build": "node build/build.js"{{#unit}},
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run"{{/unit}}{{#e2e}},
     "e2e": "node test/e2e/runner.js"{{/e2e}}{{#if_or unit e2e}},
@@ -16,7 +18,8 @@
   "dependencies": {
     "vue": "^2.2.6"{{#router}},
     "vue-router": "^2.4.0"{{/router}},
-    "vuex": "^2.3.0"
+    "vuex": "^2.3.0",
+    "vue-cordova": "^0.1.2"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
