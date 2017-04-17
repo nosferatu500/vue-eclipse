@@ -30,9 +30,10 @@ If port 8080 is already in use on your machine you must change the port number i
   - State preserving compilation error overlay
   - Lint-on-save with ESLint
   - Source maps
-  - `Vue-Awesome` Alt Font-Awesome
+  - `Pug Support` Alt Standart HTML
   - `Sass Support` Awesome!!! Right?!
   - `Bootstrap-grid` Pretty cool...
+  - `Vuex` Already included in template
 
 - `npm run build`: Production ready build.
   - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
@@ -51,6 +52,23 @@ If port 8080 is already in use on your machine you must change the port number i
   - Works with one command out of the box:
     - Selenium and chromedriver dependencies automatically handled.
     - Automatically spawns the Selenium server.
+
+## Build For Cross-Platform Setup
+
+``` bash
+# install cordova
+npm install -g cordova
+
+# add browser, android or ios platforms
+cordova platform add <platform>
+
+# if daemon non-start, find and change `gradle.jvmargs`:
+<--GradleBuilder.js-->
+`args.push('-Dorg.gradle.jvmargs=-Xmx1024m');` or `args.push('-Dorg.gradle.jvmargs=-Xmx512m');`
+
+And replace sdk tools from [download page](https://developer.android.com/studio/index.html#downloads)* 
+
+*-(under title: Get just the command line tools)
 
 ### Fork It And Make Your Own
 
