@@ -19,7 +19,7 @@
         .col-md-5
           h2 Ecosystem
           ul
-            li(v-for="m in modules"): a(:href="m.link" target="_blank") {{ m.name }}
+            li(v-for="m in modules"): a(:href="m.link" target="_blank") \{{ m.name }}
 </template>
 
 <script>
