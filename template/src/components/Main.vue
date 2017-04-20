@@ -26,19 +26,19 @@
   import { mapGetters } from 'vuex'
 
 export default {
-  name: 'hello',
-  data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
-    return {
-      msg: 'Welcome to Your Vue-Eclipse App.',{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-      msg2: 'Based on Vue.js. Created for You.'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
-    }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
-  }{{#if_eq lintConfig "airbnb"}},{{/if_eq}},
-  computed: mapGetters({
-    modules: 'allModules'
-  }),
-  created () {
-    this.$store.dispatch('getAllModules')
-  }
+    name: 'hello',
+    data{{#unless_eq lintConfig "airbnb"}} {{/unless_eq}}() {
+      return {
+        msg: 'Welcome to Your Vue-Eclipse App.',{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+        msg2: 'Based on Vue.js. Created for You.'{{#if_eq lintConfig "airbnb"}},{{/if_eq}}
+      }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
+    }{{#if_eq lintConfig "airbnb"}},{{/if_eq}},
+    computed: mapGetters({
+      modules: 'allModules'
+    }),
+    created () {
+      this.$store.dispatch('getAllModules')
+    }
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
 
