@@ -9,6 +9,11 @@ import router from './router'{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 {{/router}}
 import store from './store/store'
 
+import Buefy from 'buefy'
+import 'buefy/lib/buefy.css'
+
+Vue.use(Buefy)
+
 Vue.config.productionTip = false{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 
 import VueCordova from 'vue-cordova'

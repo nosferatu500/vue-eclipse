@@ -6,8 +6,8 @@
       br
       hr
       br
-    .row
-        .col-md-5.col-md-offset-1
+      .columns
+        .column.is-5.is-offset-1
           h2 Essential Links
           ul
             li: a(href="https://vuejs.org" target="_blank") Core Docs
@@ -15,11 +15,13 @@
             li: a(href="https://gitter.im/vuejs/vue" target="_blank") Gitter Chat
             li: a(href="https://twitter.com/vuejs" target="_blank") Twitter
             br
-            li: a(href="https://github.com/nosferatu500/eclipse-vue/" target="_blank") Docs for This Template
-        .col-md-5
+            li: a(href="https://github.com/nosferatu500/vue-eclipse/" target="_blank") Docs for This Template
+        .column.is-5
           h2 Ecosystem
           ul
             li(v-for="m in modules"): a(:href="m.link" target="_blank") \{{ m.name }}
+        button(class="button content is-success" @click="success")
+          Toast Tap Me 
 </template>
 
 <script>
@@ -38,6 +40,18 @@ export default {
     }),
     created () {
       this.$store.dispatch('getAllModules')
+    },
+    methods: {
+      success () {
+        this.$toast.open({
+          message: 'Something happened correctly!',
+          type: 'is-success',
+          position: 'bottom'
+        })
+      }
+    },
+    mounted () {
+      this.success()
     }
 }{{#if_eq lintConfig "airbnb"}};{{/if_eq}}
 </script>
@@ -47,6 +61,12 @@ export default {
 
 h1, h2 
   font-weight: normal
+
+h2
+  font-size: 1.5em
+
+h1
+  font-size: 2em
 
 h1:first-child
   font-size: 48px

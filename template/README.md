@@ -4,6 +4,8 @@
 
 ***Based*** on [Vue-cli Webpack](http://vuejs-templates.github.io/webpack/).
 
+[Live Demo](vue-eclipse.surge.sh)
+
 ## Added
 
 - `Pug Support` Alt Standart HTML

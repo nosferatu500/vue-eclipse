@@ -23,8 +23,6 @@ export default {
 
 <style lang="sass">
 
-@import "libs/bootstrap-grid/bootstrap-grid"
-
 #app 
   font-family: Hammersmith_One
   -webkit-font-smoothing: antialiased
