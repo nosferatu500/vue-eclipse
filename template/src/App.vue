@@ -30,6 +30,8 @@ export default {
   text-align: center
   color: #2c3e50
   margin-top: 60px
+  // must for mobile build
+  width: auto
   
 @media screen and (max-width: 400px)
   #app
