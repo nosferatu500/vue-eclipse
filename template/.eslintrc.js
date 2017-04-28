@@ -18,7 +18,7 @@ module.exports = {
   {{/if_eq}}
   // required to lint *.vue files
   plugins: [
-    'html'
+    'html', 'compat'
   ],
   {{#if_eq lintConfig "airbnb"}}
   // check if imports actually resolve
@@ -50,6 +50,8 @@ module.exports = {
     }],
     {{/if_eq}}
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
+    
+    "compat/compat": 2
   }
 }

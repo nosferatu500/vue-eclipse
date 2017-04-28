@@ -20,8 +20,8 @@
           h2 Ecosystem
           ul
             li(v-for="m in modules"): a(:href="m.link" target="_blank") \{{ m.name }}
-        button(class="button content is-success" @click="success")
-          Toast Tap Me 
+      button(class="button content is-success" @click="success")
+        Toast Tap Me 
 </template>
 
 <script>
